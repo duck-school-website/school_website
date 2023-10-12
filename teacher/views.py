@@ -1,7 +1,6 @@
-from django.shortcuts import render
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from my_auch import *
+from .my_auch import *
 
 class index(APIView):
     authentication_classes = []
