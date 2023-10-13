@@ -7,4 +7,5 @@ class My_authenticate(BaseAuthentication):
         if token:
             return ("duck",token)
         raise AuthenticationFailed({ "code":404, "error":"NO" })
-        # return super().authenticate(request)
+    def authenticate_header(self, request):
+        return "token"

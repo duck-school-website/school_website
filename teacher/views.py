@@ -9,4 +9,4 @@ class index(APIView):
 
 class my_class(APIView):
     def get(self,request):
-        return Response({ "code":"200", "moey":"OK", })
+        return Response({ "code":"200", "moey":"OK", "teacher":"22 shigong 1", })

@@ -1,14 +1,20 @@
 <template>
-  <p> {{ items }} </p>
+  <body>
+    <h1 align="center"> {{ w }} </h1>
+    <router-link to="/class">index</router-link>
+    <p> {{ items }} </p>
+    <router-view  />
+  </body>
 </template>
 
 <script>
-import axios from 'axios'
+import axios from 'axios';
 
 export default {
   data () {
     return {
-      items: []
+      items: [],
+      w:"welcome to",
     }
   },
   mounted () {
