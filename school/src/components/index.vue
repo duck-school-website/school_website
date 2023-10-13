@@ -3,7 +3,6 @@
     <h1 align="center"> {{ w }} </h1>
     <router-link to="/class">index</router-link>
     <p> {{ items }} </p>
-    <router-view  />
   </body>
 </template>
 
