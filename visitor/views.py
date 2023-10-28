@@ -7,4 +7,3 @@ class index(APIView):
         return Response({ "code":"200", "moey":"OK", })
 
 
-# Create your views here.

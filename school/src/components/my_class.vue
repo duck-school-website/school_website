@@ -1,5 +1,8 @@
 <template>
-  <p> {{ class_data }} </p>
+  <!-- <p> {{ class_data }} </p> -->
+  <p> {{ class_data.teacher }} </p>
+  <input v-model="message" placeholder="edit me">
+
 </template>
 
 <script>
@@ -12,14 +15,10 @@ export default {
     }
   },
   mounted() {
-    axios.get('http://127.0.0.1:8000/teacher/my_class/',
-      {
-        params: {
-          token:1,
-        }
+    axios.get('http://127.0.0.1:8000/teacher/my_class/', { params: { token:1, }
       }).then(response => (this.class_data = response.data))
   },
-  m(){
+  mounted(){
     axios.post('http://127.0.0.1:8000/teacher/my_class/',
       {
         uName: 'jiayou',
